@@ -12,6 +12,7 @@ jobs:
         - run: echo "Enviar a Imagem Docke para o Docker Hub"
   CD:
       runs-on: ubunto-latest
+      needs: [CI]
       steps:
         - run: echo "Obter o código"
         - run: echo "Configurar o Kubeconnfig"
